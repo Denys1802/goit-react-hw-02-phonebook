@@ -14,13 +14,12 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 570px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
-  padding: 10px 0;
-  width: 100%;
+  padding: 10px;
+  width: 580px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;

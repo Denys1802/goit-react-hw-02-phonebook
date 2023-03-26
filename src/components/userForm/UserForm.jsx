@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { nanoid } from 'nanoid';
 import { Component } from 'react';
 import { Form, Label, Input, Button } from './UserForm.styled';
@@ -68,3 +70,7 @@ class UserForm extends Component {
 }
 
 export default UserForm;
+
+UserForm.propTypes = {
+  handleSubmit: PropTypes.func,
+};

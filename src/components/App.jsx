@@ -13,6 +13,7 @@ class App extends Component {
       { id: nanoid(), name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
+    filterContacts: [],
   };
 
   handleSubmitForm = newContact => {
@@ -36,7 +37,14 @@ class App extends Component {
     });
   };
 
+  filterContacts = () => {
+    return this.state.contacts.filter(contact =>
+      contact.name.toLowerCase().includes(this.state.filter)
+    );
+  };
+
   render() {
+    const visibleContacts = this.filterContacts();
     return (
       <>
         <Section>
@@ -55,8 +63,8 @@ class App extends Component {
 
           <Contacts
             filter={this.state.filter}
-            contacts={this.state.contacts}
             deleteContact={this.deleteContact}
+            filterContacts={visibleContacts}
           />
         </Section>
       </>

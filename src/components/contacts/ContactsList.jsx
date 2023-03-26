@@ -1,17 +1,11 @@
+import PropTypes from 'prop-types';
+
 import { Component } from 'react';
 import { List, Item, ContactsBtn } from './ContactsList.styled';
+
 class Contacts extends Component {
-  //   state = {
-  //     filterContacts: [],
-  //   };
-  //   onChangeFilter = e => {
-  //     this.setState({ filter: e.target.value });
-  //     this.state.filterContacts = this.state.contacts.filter(contact => {
-  //       return contact.name.toLowerCase().includes(e.target.value);
-  //     });
-  //   };
   render() {
-    return this.props.contacts.map(contact => (
+    return this.props.filterContacts.map(contact => (
       <List key={contact.id}>
         <Item>
           <p>
@@ -30,3 +24,14 @@ class Contacts extends Component {
   }
 }
 export default Contacts;
+
+Contacts.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  deleteContact: PropTypes.func.isRequired,
+};

@@ -11,6 +11,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   display: block;
+  margin-top: 5px;
   width: 100%;
   padding: 10px 0;
   border: 1px solid rgba(33, 33, 33, 0.2);

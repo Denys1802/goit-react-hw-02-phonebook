@@ -18,7 +18,7 @@ export const Input = styled.input`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
+  margin-top: 5px;
   padding: 10px 0;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);

@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <>
         <Section>
-          <h1>Phomebook</h1>
+          <h1>Phonebook</h1>
           <UserForm
             onSubmit={this.handleSubmitForm}
             contacts={this.state.contacts}
